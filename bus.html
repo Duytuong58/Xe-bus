@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<title>Ebus</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bus.css">
+	<script type="text/javascript" src="js/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<div class="tab">
+	  	<button class="tablinks" id="defaultOpen"><img src="img/logo.png" alt="logo"/>Ebus</button>
+	  	<button class="tablinks" onclick="openFunction(event,'Home')"><i class="fa fa-home"></i>Home</button>
+	  	<button class="tablinks" onclick="openFunction(event,'Officer')"><i class="fa fa-user-circle-o"></i>Officer</button>
+	 	<button class="tablinks" onclick="openFunction(event,'Driver')"><i class="fa fa-id-card"></i></i>Driver</button>
+	    <button class="tablinks" onclick="openFunction(event,'Neglect')"><i class="fa fa-id-card"></i></i>Neglect</button>
+	  	<button class="tablinks" onclick="openFunction(event,'Ticker-seller')"><i class="fa fa-user"></i>Ticker-seller</button>
+	  	<button class="tablinks" onclick="openFunction(event,'Bus')"><i class="fa fa-bus"></i>Bus</button>
+	  	<button class="tablinks" onclick="openFunction(event,'Buses')"><i class="fa fa-location-arrow"></i>Buses</button>
+	  	<button class="tablinks" onclick="openFunction(event,'Circulate')"><i class="fa fa-map-signs"></i>Circulate</button>
+	    <button class="tablinks" onclick="openFunction(event,'Day-ticket')"><i class="fa fa-ticket"></i>Day-ticket</button>
+	  	<button class="tablinks" onclick="openFunction(event,'Monthly-ticket')"><i class="fa fa-ticket"></i>Monthly-tichet</button>
+	</div>
+
+	<div id="Home" class="tabcontent">
+		<div>
+			<i class="fa fa-bars" ></i>
+		  	<button id="btn-login" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+	  	</div>
+	  	<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d251637.95196238213!2d105.6189045!3d9.779349!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1585731244464!5m2!1svi!2s" width="1070px"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		<div id="id01" class="modal">
+  
+  			<form class="modal-content animate" action="/action_page.php" method="post">
+			    <div class="imgcontainer">
+			       	<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+			    </div>
+
+			    <div class="container">
+			      	<label for="uname"><b>Username</b></label>
+			      	<input type="text" placeholder="Enter Username" name="uname" required>
+
+			      	<label for="psw"><b>Password</b></label>
+			      	<input type="password" placeholder="Enter Password" name="psw" required>
+			        
+			      	<button type="submit">Login</button>
+			      	<label>
+			        <input type="checkbox" checked="checked" name="remember"> Remember me
+			     	 </label>
+			    </div>
+
+			    <div class="container" style="background-color:#f1f1f1">
+			      	<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+			      	<span class="psw">Forgot <a href="#">password?</a></span>
+			    </div>
+			</form>
+		</div>
+
+	</div>
+
+	<!-- nội dung nhân viên văn phòng -->
+
+	<div id="Officer" class="tabcontent">
+	  <h3>Officer</h3>
+	  <p>Officer is the capital of Japan.</p>
+	</div>
+
+	<!-- thông tin tài xế -->
+
+	<div id="Driver" class="tabcontent">
+	  <h3>Driver</h3>
+	  <p>Driver is the capital of Japan.</p>
+	</div>
+
+	<!-- thông tin lơ xe -->
+
+	<div id="Neglect" class="tabcontent">
+	  	<h3>Danh Sách Phụ Xe</h3>
+		<div class="tabbus">
+			<button class="tablink" onclick="openCar(event, 'car15')">Xe 15</button>
+			<button class="tablink" onclick="openCar(event, 'car16')">Xe 16</button>
+			<button class="tablink" onclick="openCar(event, 'car73')">Xe 73</button>
+			<button class="tablink" onclick="openCar(event, 'car84')">Xe 84</button>
+			<button class="tablink" onclick="openCar(event, 'car101')">Xe 101</button>
+			<button class="tablink" onclick="openCar(event, 'car144')">Xe 144</button>
+			<button class="tablink" onclick="openCar(event, 'car151')">Xe 151</button>
+			<div class="search-container">
+				<form action="">							<!-- file liên kết ô tìm kiếm xe -->
+				    <input type="search" placeholder="Search.." name="search">
+				    <button><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+		</div>
+		<div id="car15" class="tabcontents">
+			<h3>car15</h3>
+			<p>London is the capital city of England.</p>
+		</div>
+
+		<div id="car16" class="tabcontents">
+			<h3>car16</h3>
+			<p>Paris is the capital of France.</p> 
+		</div>
+
+		<div id="car73" class="tabcontents">
+			<h3>car73</h3>
+			<p>Tokyo is the capital of Japan.</p>
+		</div>
+		<div id="car84" class="tabcontents">
+			<h3>car84</h3>
+			<p>London is the capital city of England.</p>
+		</div>
+
+		<div id="car101" class="tabcontents">
+			<h3>car101</h3>
+			<p>Paris is the capital of France.</p> 
+		</div>
+
+		<div id="car144" class="tabcontents">
+			<h3>car144</h3>
+			<p>Tokyo is the capital of Japan.</p>
+		</div>
+		<div id="car151" class="tabcontents">
+			<h3>car151</h3>
+			<p>Tokyo is the capital of Japan.</p>
+		</div>
+	</div>
+	
+	<!-- thông tin nhân viên bán vé-->
+	<div id="Ticker-seller" class="tabcontent">
+		<p>Ticker-seller is the caption of japan.</p>
+	</div>
+	<!-- thông tin xe buýt -->
+	<div id="Bus" class="tabcontent">
+		<h3>Danh Sách Xe Bus</h3>
+		<div class="tabbus">
+			<button class="tablink" onclick="openCar(event, 'car15')">Xe 15</button>
+			<button class="tablink" onclick="openCar(event, 'car16')">Xe 16</button>
+			<button class="tablink" onclick="openCar(event, 'car73')">Xe 73</button>
+			<button class="tablink" onclick="openCar(event, 'car84')">Xe 84</button>
+			<button class="tablink" onclick="openCar(event, 'car101')">Xe 101</button>
+			<button class="tablink" onclick="openCar(event, 'car144')">Xe 144</button>
+			<button class="tablink" onclick="openCar(event, 'car151')">Xe 151</button>
+			<div class="search-container">
+				<form action="">							<!-- file liên kết ô tìm kiếm xe -->
+				    <input type="search" placeholder="Search.." name="search">
+				    <button><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+		</div>
+		<div id="car15" class="tabcontents">
+			<h3>car15</h3>
+			<p>London is the capital city of England.</p>
+		</div>
+
+		<div id="car16" class="tabcontents">
+			<h3>car16</h3>
+			<p>Paris is the capital of France.</p> 
+		</div>
+
+		<div id="car73" class="tabcontents">
+			<h3>car73</h3>
+			<p>Tokyo is the capital of Japan.</p>
+		</div>
+		<div id="car84" class="tabcontents">
+			<h3>car84</h3>
+			<p>London is the capital city of England.</p>
+		</div>
+
+		<div id="car101" class="tabcontents">
+			<h3>car101</h3>
+			<p>Paris is the capital of France.</p> 
+		</div>
+
+		<div id="car144" class="tabcontents">
+			<h3>car144</h3>
+			<p>Tokyo is the capital of Japan.</p>
+		</div>
+		<div id="car151" class="tabcontents">
+			<h3>car151</h3>
+			<p>Tokyo is the capital of Japan.</p>
+		</div>
+	</div>
+
+	<!-- thông tin tuyến đường -->
+	<div id="Buses" class="tabcontent">
+		  <p>tuyến xe.</p>
+	</div>
+	<!-- lưu thông -->
+	<div id="Circulate" class="tabcontent">
+		  <p>lưu thông.</p>
+	</div>
+	<!-- vé ngày -->
+	<div id="Day-ticket" class="tabcontent">
+		  <p>vé ngày.</p>
+	</div>
+	<!-- vé tháng -->
+	<div id="Monthly-ticket" class="tabcontent">
+		  <p>vé tháng.</p>
+	</div>
+
+</body>
+</html> 
